@@ -34,6 +34,51 @@ namespace PharmacyServer
                 }
             }
 }
+        public static List<StockClass> searchByName(string name)
+        {
+            List<StockClass> namelist = new List<StockClass>();
+            StockClass s = new StockClass();
+            s.ItemName = name;
+            foreach(StockClass l in stocklist)
+            {
+                if (l.ItemName == s.ItemName)
+                {
+                    namelist.Add(l);
+                }
+            }
+            return namelist;
+
+        }
+        public static List<StockClass> searchByType(string type)
+        {
+            List<StockClass> typelist = new List<StockClass>();
+            StockClass s = new StockClass();
+            s.ItemType = type;
+            foreach (StockClass l in stocklist)
+            {
+                if (l.ItemType == s.ItemType)
+                {
+                    typelist.Add(l);
+                }
+            }
+            return typelist;
+
+        }
+        public static List<StockClass> searchByFormula(string formula)
+        {
+            List<StockClass> formulalist = new List<StockClass>();
+            StockClass s = new StockClass();
+            s.ItemFormula =formula;
+            foreach (StockClass l in stocklist)
+            {
+                if (l.ItemFormula == s.ItemFormula)
+                {
+                    formulalist.Add(l);
+                }
+            }
+            return formulalist;
+
+        }
 
     }
 }

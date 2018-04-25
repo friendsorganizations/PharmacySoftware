@@ -55,6 +55,24 @@
   <wsdl:message name="IService1_update_OutputMessage">
     <wsdl:part name="parameters" element="tns:updateResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_searchName_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_searchName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_searchFormula_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchFormula" />
+  </wsdl:message>
+  <wsdl:message name="IService1_searchFormula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchFormulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_searchType_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_searchType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchTypeResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -99,6 +117,18 @@
     <wsdl:operation name="update">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/update" message="tns:IService1_update_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateResponse" message="tns:IService1_update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/searchName" message="tns:IService1_searchName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchNameResponse" message="tns:IService1_searchName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchFormula">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/searchFormula" message="tns:IService1_searchFormula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchFormulaResponse" message="tns:IService1_searchFormula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/searchType" message="tns:IService1_searchType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchTypeResponse" message="tns:IService1_searchType_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -176,6 +206,33 @@
     </wsdl:operation>
     <wsdl:operation name="update">
       <soap:operation soapAction="http://tempuri.org/IService1/update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchName">
+      <soap:operation soapAction="http://tempuri.org/IService1/searchName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFormula">
+      <soap:operation soapAction="http://tempuri.org/IService1/searchFormula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchType">
+      <soap:operation soapAction="http://tempuri.org/IService1/searchType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

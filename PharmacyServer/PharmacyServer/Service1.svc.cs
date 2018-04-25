@@ -86,7 +86,19 @@ namespace PharmacyServer
         {
             StockDL st = new StockDL();
             st.updateProduct(name, type, price, quantity);
-
+           
+        }
+        public List<StockClass> searchName(string name)
+        {
+            return StockDL.searchByName(name);
+        }
+        public List<StockClass> searchFormula(string formula)
+        {
+            return StockDL.searchByFormula(formula);
+        }
+        public List<StockClass> searchType(string type)
+        {
+            return StockDL.searchByType(type);
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

@@ -45,6 +45,12 @@ namespace Pharmacy_software.localhost {
         
         private System.Threading.SendOrPostCallback updateOperationCompleted;
         
+        private System.Threading.SendOrPostCallback searchNameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback searchFormulaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback searchTypeOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
@@ -110,6 +116,15 @@ namespace Pharmacy_software.localhost {
         
         /// <remarks/>
         public event updateCompletedEventHandler updateCompleted;
+        
+        /// <remarks/>
+        public event searchNameCompletedEventHandler searchNameCompleted;
+        
+        /// <remarks/>
+        public event searchFormulaCompletedEventHandler searchFormulaCompleted;
+        
+        /// <remarks/>
+        public event searchTypeCompletedEventHandler searchTypeCompleted;
         
         /// <remarks/>
         public event GetDataCompletedEventHandler GetDataCompleted;
@@ -385,6 +400,99 @@ namespace Pharmacy_software.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/searchName", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/PharmacyServer")]
+        public StockClass[] searchName([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("searchName", new object[] {
+                        name});
+            return ((StockClass[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void searchNameAsync(string name) {
+            this.searchNameAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void searchNameAsync(string name, object userState) {
+            if ((this.searchNameOperationCompleted == null)) {
+                this.searchNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsearchNameOperationCompleted);
+            }
+            this.InvokeAsync("searchName", new object[] {
+                        name}, this.searchNameOperationCompleted, userState);
+        }
+        
+        private void OnsearchNameOperationCompleted(object arg) {
+            if ((this.searchNameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.searchNameCompleted(this, new searchNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/searchFormula", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/PharmacyServer")]
+        public StockClass[] searchFormula([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string formula) {
+            object[] results = this.Invoke("searchFormula", new object[] {
+                        formula});
+            return ((StockClass[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void searchFormulaAsync(string formula) {
+            this.searchFormulaAsync(formula, null);
+        }
+        
+        /// <remarks/>
+        public void searchFormulaAsync(string formula, object userState) {
+            if ((this.searchFormulaOperationCompleted == null)) {
+                this.searchFormulaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsearchFormulaOperationCompleted);
+            }
+            this.InvokeAsync("searchFormula", new object[] {
+                        formula}, this.searchFormulaOperationCompleted, userState);
+        }
+        
+        private void OnsearchFormulaOperationCompleted(object arg) {
+            if ((this.searchFormulaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.searchFormulaCompleted(this, new searchFormulaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/searchType", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/PharmacyServer")]
+        public StockClass[] searchType([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string type) {
+            object[] results = this.Invoke("searchType", new object[] {
+                        type});
+            return ((StockClass[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void searchTypeAsync(string type) {
+            this.searchTypeAsync(type, null);
+        }
+        
+        /// <remarks/>
+        public void searchTypeAsync(string type, object userState) {
+            if ((this.searchTypeOperationCompleted == null)) {
+                this.searchTypeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsearchTypeOperationCompleted);
+            }
+            this.InvokeAsync("searchType", new object[] {
+                        type}, this.searchTypeOperationCompleted, userState);
+        }
+        
+        private void OnsearchTypeOperationCompleted(object arg) {
+            if ((this.searchTypeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.searchTypeCompleted(this, new searchTypeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string GetData(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
@@ -466,7 +574,7 @@ namespace Pharmacy_software.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -589,7 +697,7 @@ namespace Pharmacy_software.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -778,6 +886,84 @@ namespace Pharmacy_software.localhost {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
     public delegate void updateCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void searchNameCompletedEventHandler(object sender, searchNameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class searchNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal searchNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public StockClass[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((StockClass[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void searchFormulaCompletedEventHandler(object sender, searchFormulaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class searchFormulaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal searchFormulaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public StockClass[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((StockClass[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void searchTypeCompletedEventHandler(object sender, searchTypeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class searchTypeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal searchTypeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public StockClass[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((StockClass[])(this.results[0]));
+            }
+        }
+    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

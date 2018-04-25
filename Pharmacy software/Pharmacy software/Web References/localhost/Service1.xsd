@@ -115,6 +115,48 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="searchName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="searchNameResult" nillable="true" type="q2:ArrayOfStockClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchFormula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="formula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchFormulaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="searchFormulaResult" nillable="true" type="q3:ArrayOfStockClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="searchTypeResult" nillable="true" type="q4:ArrayOfStockClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -132,14 +174,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="composite" nillable="true" type="q2:CompositeType" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="composite" nillable="true" type="q5:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q3:CompositeType" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q6:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

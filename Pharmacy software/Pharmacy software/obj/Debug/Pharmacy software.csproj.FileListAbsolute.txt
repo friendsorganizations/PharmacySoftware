@@ -54,3 +54,18 @@ C:\Users\Nauman Malik\Desktop\GitHub\PharmacySoftware\Pharmacy software\Pharmacy
 C:\Users\Nauman Malik\Desktop\GitHub\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Register.resources
 C:\Users\Nauman Malik\Desktop\GitHub\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.stock.resources
 C:\Users\Nauman Malik\Desktop\GitHub\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csproj.GenerateResource.Cache
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe.config
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csprojResolveAssemblyReference.cache
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.change_passwrd.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Forget_passwrd.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Form1.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Login.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Properties.Resources.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Register.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.stock.resources
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csproj.GenerateResource.Cache
+C:\Users\NUMAN\Desktop\github2\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Sell_product.resources

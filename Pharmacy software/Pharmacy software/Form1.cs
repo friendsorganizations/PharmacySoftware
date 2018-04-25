@@ -42,9 +42,9 @@ namespace Pharmacy_software
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Sell_product p = new Sell_product();
-            //this.Hide();
-            //p.Show(); 
+            Sell_product p = new Sell_product();
+            this.Hide();
+            p.Show(); 
         }
 
         private void timer1_Tick(object sender, EventArgs e)

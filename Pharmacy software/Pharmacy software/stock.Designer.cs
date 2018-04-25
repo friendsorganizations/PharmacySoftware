@@ -352,6 +352,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Aqua;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
