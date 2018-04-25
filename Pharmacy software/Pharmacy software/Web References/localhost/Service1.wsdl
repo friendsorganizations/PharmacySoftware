@@ -49,6 +49,12 @@
   <wsdl:message name="IService1_showAll_OutputMessage">
     <wsdl:part name="parameters" element="tns:showAllResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_update_InputMessage">
+    <wsdl:part name="parameters" element="tns:update" />
+  </wsdl:message>
+  <wsdl:message name="IService1_update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -89,6 +95,10 @@
     <wsdl:operation name="showAll">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/showAll" message="tns:IService1_showAll_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/showAllResponse" message="tns:IService1_showAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/update" message="tns:IService1_update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateResponse" message="tns:IService1_update_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -157,6 +167,15 @@
     </wsdl:operation>
     <wsdl:operation name="showAll">
       <soap:operation soapAction="http://tempuri.org/IService1/showAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="http://tempuri.org/IService1/update" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

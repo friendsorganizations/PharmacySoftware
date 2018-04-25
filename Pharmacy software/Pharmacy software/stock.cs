@@ -44,11 +44,15 @@ namespace Pharmacy_software
         {
             sellToolStripMenuItem.Enabled = false;
             t.Columns.Add("ExpiryDate", typeof(string));
+            t.Columns.Add("Expiryspec", typeof(string));
             t.Columns.Add("ItemFormula", typeof(string));
             t.Columns.Add("ItemName", typeof(string));
             t.Columns.Add("ItemPrice", typeof(int));
+           t.Columns.Add("ItemPricespec", typeof(int));
             t.Columns.Add("ItemQuantity", typeof(int));
+            t.Columns.Add("Itemquantityspec", typeof(int));
             t.Columns.Add("ItemType", typeof(string));
+  
             dataGridView1.DataSource = t;
 
         }
@@ -68,8 +72,15 @@ namespace Pharmacy_software
             localhost.Service1 s = new localhost.Service1();
             //   s.add(textBox1.Text,comboBox1.Text,textBox2.Text,int.Parse(textBox10.Text),pr,int.Parse(textBox9.Text),pr,DateTime.Parse(dateTimePicker1.Text),pr,)
             bool prc_spec = true;
-            t.Rows.Add(dateTimePicker1.Value, textBox2.Text, textBox1.Text, int.Parse(textBox10.Text), int.Parse(textBox9.Text), comboBox1.Text);
+            bool outer_sp = true;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            t.Rows.Add(dateTimePicker1.Value,outer_sp, textBox2.Text, textBox1.Text, int.Parse(textBox10.Text), outer_sp,int.Parse(textBox9.Text),outer_sp, comboBox1.Text);
+            
             s.add(textBox1.Text, comboBox1.Text, textBox2.Text, int.Parse(textBox10.Text), prc_spec, int.Parse(textBox9.Text), prc_spec, DateTime.Parse(dateTimePicker1.Text), prc_spec);
+
+           
             MessageBox.Show("Product added successfully");
             dataGridView1.DataSource = t;
         }
@@ -86,7 +97,7 @@ namespace Pharmacy_software
 
         private void button3_Click(object sender, EventArgs e)
         {
-            selected_row = dataGridView1.CurrentCell.RowIndex;
+         selected_row = dataGridView1.CurrentCell.RowIndex;
 
             bool ind_spec = true;
             localhost.Service1 w = new localhost.Service1();
@@ -119,8 +130,20 @@ namespace Pharmacy_software
 
         private void button2_Click(object sender, EventArgs e)
         {
+           selected_row = dataGridView1.CurrentCell.RowIndex;
            
-         
+            DataGridViewRow newdata = dataGridView1.Rows[selected_row];
+
+            newdata.Cells[6].Value = textBox4.Text;
+            newdata.Cells[4].Value = textBox3.Text;
+
+            bool pr = true;
+            bool qt = true;
+
+            localhost.Service1 local = new localhost.Service1();
+            local.update(newdata.Cells[3].ToString(), newdata.Cells[8].Value.ToString(), int.Parse(newdata.Cells[4].Value.ToString()), pr, int.Parse(newdata.Cells[6].Value.ToString()), qt);
+       
+
         }
 
         private void cmdCellClick(object sender, DataGridViewCellEventArgs e)
@@ -128,7 +151,7 @@ namespace Pharmacy_software
             selected_row = e.RowIndex;
             DataGridViewRow r = dataGridView1.Rows[selected_row];
        
-            textBox4.Text = r.Cells[3].Value.ToString();
+            textBox4.Text = r.Cells[6].Value.ToString();
             textBox3.Text = r.Cells[4].Value.ToString();
 
         }
@@ -145,6 +168,11 @@ namespace Pharmacy_software
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

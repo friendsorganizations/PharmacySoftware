@@ -16,8 +16,24 @@ namespace PharmacyServer
         {
 
             StockDL.stocklist.RemoveAt(ind);
+}
+        public void updateProduct(string name,string type,int price,int quantity) { 
+        StockClass c = new StockClass();
+        c.ItemName = name;
+           
+            c.ItemType = type;
+            c.ItemPrice = price;
+            c.ItemQuantity = quantity;
 
+            foreach (StockClass sl in StockDL.stocklist)
+            {
+                if (sl.ItemName == c.ItemName && sl.ItemType == c.ItemType)
+                {
+                    sl.ItemPrice = c.ItemPrice;
+                    sl.ItemQuantity = c.ItemQuantity;
+                }
+            }
+}
 
-        }
     }
 }

@@ -82,6 +82,13 @@ namespace PharmacyServer
         {
             return StockDL.stocklist;
         }
+        public void update(string name, string type, int price, int quantity)
+        {
+            StockDL st = new StockDL();
+            st.updateProduct(name, type, price, quantity);
+
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
