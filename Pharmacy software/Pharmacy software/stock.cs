@@ -43,12 +43,12 @@ namespace Pharmacy_software
         private void stock_Load(object sender, EventArgs e)
         {
             sellToolStripMenuItem.Enabled = false;
-            t.Columns.Add("Name", typeof(string));
-            t.Columns.Add("Formula", typeof(string));
-            t.Columns.Add("Type", typeof(string));
-            t.Columns.Add("Quantity", typeof(int));
-            t.Columns.Add("Price", typeof(int));
-            t.Columns.Add("Expiry date", typeof(string));
+            t.Columns.Add("ExpiryDate", typeof(string));
+            t.Columns.Add("ItemFormula", typeof(string));
+            t.Columns.Add("ItemName", typeof(string));
+            t.Columns.Add("ItemPrice", typeof(int));
+            t.Columns.Add("ItemQuantity", typeof(int));
+            t.Columns.Add("ItemType", typeof(string));
             dataGridView1.DataSource = t;
 
         }
@@ -65,8 +65,13 @@ namespace Pharmacy_software
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-
+            localhost.Service1 s = new localhost.Service1();
+            //   s.add(textBox1.Text,comboBox1.Text,textBox2.Text,int.Parse(textBox10.Text),pr,int.Parse(textBox9.Text),pr,DateTime.Parse(dateTimePicker1.Text),pr,)
+            bool prc_spec = true;
+            t.Rows.Add(dateTimePicker1.Value, textBox2.Text, textBox1.Text, int.Parse(textBox10.Text), int.Parse(textBox9.Text), comboBox1.Text);
+            s.add(textBox1.Text, comboBox1.Text, textBox2.Text, int.Parse(textBox10.Text), prc_spec, int.Parse(textBox9.Text), prc_spec, DateTime.Parse(dateTimePicker1.Text), prc_spec);
+            MessageBox.Show("Product added successfully");
+            dataGridView1.DataSource = t;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -81,8 +86,22 @@ namespace Pharmacy_software
 
         private void button3_Click(object sender, EventArgs e)
         {
+            selected_row = dataGridView1.CurrentCell.RowIndex;
 
-           
+            bool ind_spec = true;
+            localhost.Service1 w = new localhost.Service1();
+
+            w.delete_product(selected_row, ind_spec);
+
+            BindingSource s = new BindingSource();
+            s.DataSource = w.showAll();
+            dataGridView1.DataSource = s;
+
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            MessageBox.Show("Deleted successfully");
+
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)

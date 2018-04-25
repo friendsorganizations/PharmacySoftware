@@ -12,3 +12,31 @@ E:\Help_out-master\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy softwa
 E:\Help_out-master\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.pdb
 E:\Help_out-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.exe
 E:\Help_out-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe.config
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csprojResolveAssemblyReference.cache
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.change_passwrd.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Forget_passwrd.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Form1.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Login.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Properties.Resources.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Register.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.stock.resources
+C:\Users\NUMAN\Downloads\PharmacySoftware-master\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csproj.GenerateResource.Cache
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe.config
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.exe
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\bin\Debug\Pharmacy software.pdb
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csprojResolveAssemblyReference.cache
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.change_passwrd.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Forget_passwrd.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Form1.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Login.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Properties.Resources.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.Register.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy_software.stock.resources
+C:\Users\NUMAN\Desktop\Github\PharmacySoftware\Pharmacy software\Pharmacy software\obj\Debug\Pharmacy software.csproj.GenerateResource.Cache

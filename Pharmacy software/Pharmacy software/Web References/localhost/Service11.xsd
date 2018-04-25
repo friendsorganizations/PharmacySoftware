@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PharmacyServer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PharmacyServer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfStockClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockClass" nillable="true" type="tns:StockClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockClass" nillable="true" type="tns:ArrayOfStockClass" />
+  <xs:complexType name="StockClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemFormula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockClass" nillable="true" type="tns:StockClass" />
   <xs:complexType name="CompositeType">
     <xs:sequence>
       <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />

@@ -23,7 +23,12 @@ namespace PharmacyServer
        bool resetPassword(string old_password, string new_password);
         [OperationContract]
         bool forgetPassword(string name, string new_password);
-
+        [OperationContract]
+        void add(string name, string type, string formula, int price, int quantity, DateTime exp);
+        [OperationContract]
+        void delete_product(int ind);
+        [OperationContract]
+        List<StockClass> showAll();
         [OperationContract]
         string GetData(int value);
 

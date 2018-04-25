@@ -60,6 +60,28 @@ namespace PharmacyServer
             
 
         }
+        public void add(string name,string type,string formula,int price,int quantity,DateTime exp)
+        {
+            StockClass st = new StockClass();
+            st.ItemName = name;
+            st.ItemType = type;
+            st.ItemFormula = formula;
+            st.ItemPrice = price;
+            st.ItemQuantity = quantity;
+            st.ItemDate = exp;
+            StockDL.stocklist.Add(st);
+        }
+
+        public void delete_product(int ind)
+        {
+            StockDL s = new StockDL();
+            s.deleteProduct(ind);
+           
+        }
+        public List<StockClass> showAll()
+        {
+            return StockDL.stocklist;
+        }
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

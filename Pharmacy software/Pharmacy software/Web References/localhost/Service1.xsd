@@ -59,6 +59,47 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="add">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formula" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="exp" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delete_product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ind" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delete_productResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="showAllResult" nillable="true" type="q1:ArrayOfStockClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -76,14 +117,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="composite" nillable="true" type="q2:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PharmacyServer" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q3:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
