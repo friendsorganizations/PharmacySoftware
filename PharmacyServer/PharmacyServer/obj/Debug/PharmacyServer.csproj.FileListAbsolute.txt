@@ -1,0 +1,12 @@
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.csprojResolveAssemblyReference.cache
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll.config
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\bin\PharmacyServer.pdb
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.dll
+c:\users\muhammad iqbal\documents\visual studio 2015\Projects\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.pdb
+E:\Help_out-master\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll.config
+E:\Help_out-master\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll
+E:\Help_out-master\PharmacyServer\PharmacyServer\bin\PharmacyServer.pdb
+E:\Help_out-master\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.csprojResolveAssemblyReference.cache
+E:\Help_out-master\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.dll
+E:\Help_out-master\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.pdb
