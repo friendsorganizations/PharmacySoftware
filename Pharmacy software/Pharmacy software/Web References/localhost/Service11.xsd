@@ -17,6 +17,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="StockClass" nillable="true" type="tns:StockClass" />
+  <xs:complexType name="ArrayOfOrderClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderClass" nillable="true" type="tns:OrderClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderClass" nillable="true" type="tns:ArrayOfOrderClass" />
+  <xs:complexType name="OrderClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderClass" nillable="true" type="tns:OrderClass" />
   <xs:complexType name="CompositeType">
     <xs:sequence>
       <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />

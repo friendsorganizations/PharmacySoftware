@@ -51,6 +51,10 @@ namespace Pharmacy_software.localhost {
         
         private System.Threading.SendOrPostCallback searchTypeOperationCompleted;
         
+        private System.Threading.SendOrPostCallback add_orderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback showorderOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
@@ -125,6 +129,12 @@ namespace Pharmacy_software.localhost {
         
         /// <remarks/>
         public event searchTypeCompletedEventHandler searchTypeCompleted;
+        
+        /// <remarks/>
+        public event add_orderCompletedEventHandler add_orderCompleted;
+        
+        /// <remarks/>
+        public event showorderCompletedEventHandler showorderCompleted;
         
         /// <remarks/>
         public event GetDataCompletedEventHandler GetDataCompleted;
@@ -493,6 +503,77 @@ namespace Pharmacy_software.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/add_order", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void add_order([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string type, int quantity, [System.Xml.Serialization.XmlIgnoreAttribute()] bool quantitySpecified, int price, [System.Xml.Serialization.XmlIgnoreAttribute()] bool priceSpecified, int total, [System.Xml.Serialization.XmlIgnoreAttribute()] bool totalSpecified) {
+            this.Invoke("add_order", new object[] {
+                        name,
+                        type,
+                        quantity,
+                        quantitySpecified,
+                        price,
+                        priceSpecified,
+                        total,
+                        totalSpecified});
+        }
+        
+        /// <remarks/>
+        public void add_orderAsync(string name, string type, int quantity, bool quantitySpecified, int price, bool priceSpecified, int total, bool totalSpecified) {
+            this.add_orderAsync(name, type, quantity, quantitySpecified, price, priceSpecified, total, totalSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void add_orderAsync(string name, string type, int quantity, bool quantitySpecified, int price, bool priceSpecified, int total, bool totalSpecified, object userState) {
+            if ((this.add_orderOperationCompleted == null)) {
+                this.add_orderOperationCompleted = new System.Threading.SendOrPostCallback(this.Onadd_orderOperationCompleted);
+            }
+            this.InvokeAsync("add_order", new object[] {
+                        name,
+                        type,
+                        quantity,
+                        quantitySpecified,
+                        price,
+                        priceSpecified,
+                        total,
+                        totalSpecified}, this.add_orderOperationCompleted, userState);
+        }
+        
+        private void Onadd_orderOperationCompleted(object arg) {
+            if ((this.add_orderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.add_orderCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/showorder", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/PharmacyServer")]
+        public OrderClass[] showorder() {
+            object[] results = this.Invoke("showorder", new object[0]);
+            return ((OrderClass[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void showorderAsync() {
+            this.showorderAsync(null);
+        }
+        
+        /// <remarks/>
+        public void showorderAsync(object userState) {
+            if ((this.showorderOperationCompleted == null)) {
+                this.showorderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnshoworderOperationCompleted);
+            }
+            this.InvokeAsync("showorder", new object[0], this.showorderOperationCompleted, userState);
+        }
+        
+        private void OnshoworderOperationCompleted(object arg) {
+            if ((this.showorderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.showorderCompleted(this, new showorderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string GetData(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
@@ -574,7 +655,7 @@ namespace Pharmacy_software.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -697,7 +778,7 @@ namespace Pharmacy_software.localhost {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -739,6 +820,116 @@ namespace Pharmacy_software.localhost {
             }
             set {
                 this.stringValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/PharmacyServer")]
+    public partial class OrderClass {
+        
+        private string itemNameField;
+        
+        private int itemPriceField;
+        
+        private bool itemPriceFieldSpecified;
+        
+        private int itemQuantityField;
+        
+        private bool itemQuantityFieldSpecified;
+        
+        private string itemTypeField;
+        
+        private int total1Field;
+        
+        private bool total1FieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ItemName {
+            get {
+                return this.itemNameField;
+            }
+            set {
+                this.itemNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ItemPrice {
+            get {
+                return this.itemPriceField;
+            }
+            set {
+                this.itemPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ItemPriceSpecified {
+            get {
+                return this.itemPriceFieldSpecified;
+            }
+            set {
+                this.itemPriceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ItemQuantity {
+            get {
+                return this.itemQuantityField;
+            }
+            set {
+                this.itemQuantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ItemQuantitySpecified {
+            get {
+                return this.itemQuantityFieldSpecified;
+            }
+            set {
+                this.itemQuantityFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ItemType {
+            get {
+                return this.itemTypeField;
+            }
+            set {
+                this.itemTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Total1 {
+            get {
+                return this.total1Field;
+            }
+            set {
+                this.total1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool Total1Specified {
+            get {
+                return this.total1FieldSpecified;
+            }
+            set {
+                this.total1FieldSpecified = value;
             }
         }
     }
@@ -961,6 +1152,36 @@ namespace Pharmacy_software.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((StockClass[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void add_orderCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void showorderCompletedEventHandler(object sender, showorderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class showorderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal showorderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public OrderClass[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((OrderClass[])(this.results[0]));
             }
         }
     }

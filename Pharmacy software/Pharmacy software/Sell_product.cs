@@ -59,7 +59,20 @@ namespace Pharmacy_software
 
         private void cmdAddOrder(object sender, EventArgs e)
         {
+            int per_tottal;
 
+            localhost.Service1 s = new localhost.Service1();
+            bool quant_spec = true;
+            per_tottal = int.Parse(textBox4.Text) * int.Parse(textBox1.Text);
+            s.add_order(textBox12.Text, comboBox2.Text, int.Parse(textBox4.Text), quant_spec, int.Parse(textBox1.Text), quant_spec, per_tottal, quant_spec);
+            //   t2.Rows.Add(textBox12.Text, comboBox2.Text, int.Parse(textBox4.Text), quant_spec, int.Parse(textBox1.Text), quant_spec, per_tottal, quant_spec);
+
+  t2.Rows.Add(textBox12.Text, int.Parse(textBox1.Text),quant_spec, comboBox2.Text, int.Parse(textBox4.Text),quant_spec, per_tottal,quant_spec);
+            dataGridView4.DataSource = t2;
+            dataGridView4.Columns[2].Visible = false;
+            dataGridView4.Columns[5].Visible = false;
+            dataGridView4.Columns[7].Visible = false;
+        
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -89,6 +102,7 @@ namespace Pharmacy_software
             dataGridView1.Columns[7].Visible = false;
         }
         DataTable t = new DataTable();
+        DataTable t2 = new DataTable();
         private void Sell_product_Load(object sender, EventArgs e)
         {
             t.Columns.Add("ExpiryDate", typeof(string));
@@ -102,6 +116,23 @@ namespace Pharmacy_software
             t.Columns.Add("ItemType", typeof(string));
 
             dataGridView1.DataSource = t;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+
+            t2.Columns.Add("ItemName", typeof(string));
+            t2.Columns.Add("ItemPrice", typeof(int));
+           t2.Columns.Add("ItemPricespec", typeof(int));
+            t2.Columns.Add("ItemType", typeof(string));
+            t2.Columns.Add("Itemquantity", typeof(int));
+            t2.Columns.Add("Itemquantityspec", typeof(int));
+            t2.Columns.Add("ItemTotal1", typeof(int));
+            t2.Columns.Add("ItemTotalspec", typeof(int));
+            dataGridView4.DataSource = t2;
+            dataGridView4.Columns[2].Visible = false;
+            dataGridView4.Columns[5].Visible = false;
+            dataGridView4.Columns[7].Visible = false;
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -121,6 +152,41 @@ namespace Pharmacy_software
             Form1 m = new Form1();
             this.Hide();
             m.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 s = new localhost.Service1();
+            BindingSource q = new BindingSource();
+            q.DataSource = s.showorder();
+            dataGridView4.DataSource = q;
+            dataGridView4.Columns[2].Visible = false;
+            dataGridView4.Columns[4].Visible = false;
+           dataGridView4.Columns[7].Visible = false;
+        }
+        int selected_row;
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selected_row = e.RowIndex;
+            DataGridViewRow r = dataGridView1.Rows[selected_row];
+            textBox1.Text = r.Cells[4].Value.ToString();
+           // textBox4.Text = r.Cells[6].Value.ToString();
+            comboBox2.Text= r.Cells[8].Value.ToString();
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

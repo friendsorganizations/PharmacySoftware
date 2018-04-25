@@ -12,7 +12,6 @@ namespace PharmacyServer
     [ServiceContract]
     public interface IService1
     {
-        
 
         [OperationContract]
         void Register(string name, string password);
@@ -39,8 +38,11 @@ namespace PharmacyServer
         List<StockClass> searchFormula(string formula);
         [OperationContract]
         List<StockClass> searchType(string type);
-       
 
+        [OperationContract]
+        void add_order(string name,string type,int quantity, int price, int total);
+        [OperationContract]
+        List<OrderClass> showorder();
         [OperationContract]
         string GetData(int value);
 

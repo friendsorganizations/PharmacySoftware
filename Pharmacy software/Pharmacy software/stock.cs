@@ -78,7 +78,7 @@ namespace Pharmacy_software
             dataGridView1.Columns[7].Visible = false;
             t.Rows.Add(dateTimePicker1.Value,outer_sp, textBox2.Text, textBox1.Text, int.Parse(textBox10.Text), outer_sp,int.Parse(textBox9.Text),outer_sp, comboBox1.Text);
             
-            s.add(textBox1.Text, comboBox1.Text, textBox2.Text, int.Parse(textBox10.Text), prc_spec, int.Parse(textBox9.Text), prc_spec, DateTime.Parse(dateTimePicker1.Text), prc_spec);
+     s.add(textBox1.Text, comboBox1.Text, textBox2.Text, int.Parse(textBox10.Text), prc_spec, int.Parse(textBox9.Text), prc_spec, DateTime.Parse(dateTimePicker1.Text), prc_spec);
 
            
             MessageBox.Show("Product added successfully");

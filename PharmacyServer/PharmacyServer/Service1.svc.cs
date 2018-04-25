@@ -100,6 +100,22 @@ namespace PharmacyServer
         {
             return StockDL.searchByType(type);
         }
+        public void add_order(string name, string type, int quantity,int price,int total)
+        {
+            OrderClass order = new OrderClass();
+            order.ItemName = name;
+            order.ItemType = type;
+           order.ItemQuantity=quantity;
+            order.ItemPrice = price;
+            order.Total1 = total;
+            OrderDL.orderlist.Add(order);
+
+
+        }
+        public List<OrderClass> showorder()
+        {
+            return OrderDL.orderlist;
+        }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
@@ -113,6 +129,7 @@ namespace PharmacyServer
             }
             return composite;
         }
+
 
         
     }
