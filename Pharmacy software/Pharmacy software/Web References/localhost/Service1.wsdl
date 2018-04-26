@@ -91,6 +91,12 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_deleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrderResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -153,6 +159,10 @@
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteOrder" message="tns:IService1_deleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteOrderResponse" message="tns:IService1_deleteOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -280,6 +290,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteOrder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -12,5 +12,10 @@ namespace PharmacyServer
         {
             orderlist.Add(selecteditems);
         }
+        public void deleteOrder(int index)
+        {
+
+            OrderDL.orderlist.RemoveAt(index);
+        }
     }
 }

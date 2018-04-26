@@ -45,6 +45,8 @@ namespace PharmacyServer
         List<OrderClass> showorder();
         [OperationContract]
         string GetData(int value);
+        [OperationContract]
+        void deleteOrder(int index);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

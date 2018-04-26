@@ -78,6 +78,11 @@ namespace PharmacyServer
             s.deleteProduct(ind);
            
         }
+        public void deleteOrder(int index)
+        {
+            OrderDL d = new OrderDL();
+            d.deleteOrder(index);
+        }
         public List<StockClass> showAll()
         {
             return StockDL.stocklist;

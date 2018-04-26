@@ -82,8 +82,22 @@ namespace Pharmacy_software
 
         private void cmdDeleteOrder(object sender, EventArgs e)
         {
+            selected_row = dataGridView4.CurrentCell.RowIndex;
 
-        }
+            bool ind_spec = true;
+            localhost.Service1 w = new localhost.Service1();
+
+            w.delete_product(selected_row, ind_spec);
+
+            BindingSource s = new BindingSource();
+            s.DataSource = w.showAll();
+            dataGridView4.DataSource = s;
+
+            dataGridView4.Columns[1].Visible = false;
+            dataGridView4.Columns[5].Visible = false;
+            dataGridView4.Columns[7].Visible = false;
+            MessageBox.Show("Deleted successfully");
+    }
 
         private void cmdPrintOrder(object sender, EventArgs e)
         {

@@ -40,3 +40,9 @@ C:\Users\Nauman Malik\Desktop\New folder (2)\PharmacySoftware\PharmacyServer\Pha
 C:\Users\Nauman Malik\Desktop\New folder (2)\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.csprojResolveAssemblyReference.cache
 C:\Users\Nauman Malik\Desktop\New folder (2)\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.dll
 C:\Users\Nauman Malik\Desktop\New folder (2)\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.pdb
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.csprojResolveAssemblyReference.cache
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.dll
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\obj\Debug\PharmacyServer.pdb
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll.config
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\bin\PharmacyServer.dll
+C:\Users\Muhammad Iqbal\Desktop\hub\PharmacySoftware\PharmacyServer\PharmacyServer\bin\PharmacyServer.pdb
